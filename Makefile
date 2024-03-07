@@ -16,7 +16,7 @@
 
 # Disable CGO so that we always generate static binaries:
 export CGO_ENABLED=0
-export version=""
+export version="1.0.0"
 
 ifeq ($(shell go env GOOS),windows)
 	BINARY=terraform-provider-rhcs.exe

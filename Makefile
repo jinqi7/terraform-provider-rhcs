@@ -16,7 +16,7 @@
 
 # Disable CGO so that we always generate static binaries:
 export CGO_ENABLED=0
-export version=""
+export version="v2.1"
 
 ifeq ($(shell go env GOOS),windows)
 	BINARY=terraform-provider-rhcs.exe
@@ -31,7 +31,7 @@ GO_ARCH=$(shell go env GOARCH)
 TARGET_ARCH=$(shell go env GOOS)_${GO_ARCH}
 
 # Import path of the project:
-import_path:=github.com/terraform-redhat/terraform-provider-rhcs
+import_path:=github.com/jinqi7/terraform-provider-rhcs
 
 # Version of the project:
 version=$(shell git describe --abbrev=0 | sed 's/^v//' | sed 's/-prerelease\.[0-9]*//')
